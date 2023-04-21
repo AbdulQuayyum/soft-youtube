@@ -1,11 +1,13 @@
 import { MdMusicNote, MdDeveloperMode, MdFitnessCenter, MdTheaterComedy, MdGraphicEq, MdCheckroom, MdFaceRetouchingNatural, MdSchool, MdLiveTv, MdSportsEsports, MdOndemandVideo, } from "react-icons/md"
 import { RxDashboard } from "react-icons/rx"
 import { TbCode } from "react-icons/tb"
+import { HiOutlinePhotograph } from "react-icons/hi"
 
 export const Categories = [
     { name: 'New', icon: <RxDashboard size={24} />, },
     // { name: 'JS Mastery', icon: <TbCode size={24} />, },
     { name: 'Coding', icon: <TbCode size={24} />, },
+    { name: 'Anime', icon: <HiOutlinePhotograph size={24} />, },
     // { name: 'ReactJS', icon: <TbCode size={24} />, },
     // { name: 'NextJS', icon: <TbCode size={24} />, },
     { name: 'Music', icon: <MdMusicNote size={24} /> },
