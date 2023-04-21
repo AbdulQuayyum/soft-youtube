@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 
+import { FetchData } from "../Utilities/FetchData"
 import { Footer, Sidebar, Videos } from "../Components/Index"
 
 const Feed = () => {
     const [selectedCategory, setSelectedCategory] = useState("New");
     const [videos, setVideos] = useState(null);
 
-    // useEffect(() => {
-    //     setVideos(null);
+    useEffect(() => {
+        setVideos(null);
 
-    //     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-    //       .then((data) => setVideos(data.items))
-    //     }, [selectedCategory]);
+        FetchData(`search?part=snippet&q=${selectedCategory}`)
+            .then((data) => setVideos(data.items))
+    }, [selectedCategory]);
 
     return (
         <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>

@@ -10,7 +10,7 @@ const options = {
     },
 };
 
-export const fetchFromAPI = async (url) => {
+export const FetchData = async (url) => {
     const { data } = await axios.get(`${import.meta.env.VITE_BASE_URL}/${url}`, options);
 
     return data;
